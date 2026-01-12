@@ -30,6 +30,9 @@ export default function Home() {
               and develop video games from the ground up — focusing on fun gameplay and 
               deep virtual world interaction.
             </p>
+            <p>
+              This is a test of the new deployment
+            </p>
           </div>
           <img 
             src="/profile.jpg" 
