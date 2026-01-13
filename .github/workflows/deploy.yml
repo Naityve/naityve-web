@@ -21,3 +21,4 @@ jobs:
             sudo git pull origin master
             sudo npm install
             sudo npm run build
+            pm2 restart naityve
