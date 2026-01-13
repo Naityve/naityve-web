@@ -1,4 +1,10 @@
-export default function Home() {
+import { getContent } from '@/lib/content';
+
+export const dynamic = 'force-dynamic'; // Ensure fresh content on each request
+
+export default async function Home() {
+  const content = await getContent();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -22,13 +28,10 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-10">
           <div className="md:max-w-xl">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Programmer & Technician
+              {content.hero.title}
             </h2>
             <p className="text-lg text-gray-600">
-              I work as a technician and store manager at a small tech repair business. 
-              On the side, I build software that solves real bottlenecks for small businesses, 
-              and develop video games from the ground up — focusing on fun gameplay and 
-              deep virtual world interaction.
+              {content.hero.description}
             </p>
           </div>
           <img 
